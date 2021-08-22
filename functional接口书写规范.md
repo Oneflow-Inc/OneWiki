@@ -143,5 +143,3 @@ signature在书写时也有几点注意事项：
   bind_python: True or False
 ```
 需要注意的是，signatures之间必须是正交的，否则会出现signature被掩盖的情况。
-
-会议录屏链接：13机器 /tank/meeting_records/20210615-ChenHoujiang-RegisterAndWriteFunctionalMethod.mp4
