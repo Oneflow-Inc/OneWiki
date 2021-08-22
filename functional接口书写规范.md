@@ -100,7 +100,7 @@ ONEFLOW_FUNCTION_LIBRARY(m) {
 
 ```yaml
 - name: "add_scalar"
-  signature: "Tensor ScalarAdd(Tensor x, Scalar alpha)"
+  signature: "Tensor (Tensor x, Scalar alpha) => ScalarAdd"
   bind_python: True
 ```
 
@@ -118,13 +118,13 @@ signature在书写时也有几点注意事项：
 - 参数可以设置默认值，比如可以给上面的alpha设置一个默认值，
 
   ```yaml
-  signature: "Tensor ScalarAdd(Tensor x, Scalar alpha=1)"
+  signature: "Tensor (Tensor x, Scalar alpha=1) => ScalarAdd"
   ```
 
 - 参数列表中间可以引入符号`*`，表示在Python中调用时，符号`*`之后的参数必须以key-word方式传参数。比如，
 
   ```yaml
-  signature: "Tensor ScalarAdd(Tensor x, *, Scalar alpha=1)"
+  signature: "Tensor (Tensor x, *, Scalar alpha=1) => ScalarAdd"
   ```
   则合法的使用方式如下，
 
