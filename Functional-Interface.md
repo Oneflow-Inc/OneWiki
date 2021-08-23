@@ -83,7 +83,7 @@ ONEFLOW_FUNCTION_LIBRARY(m) {
 - signature指定接口函数的签名，签名需要和对应的函数执行体保持一致，并且这里的`Func`作为signature的函数名，需要和前面注册的函数执行体的name一致，C++接口用的是这个name。这里的参数类型做了一些简化，比如现在支持的输入参数类型有，
 
   ```c++
-  "Tensor", "TensorTuple", "Scalar", "Int", "Int32", "Int64", "Float", "Double", "String", "Bool",
+  "Tensor", "TensorTuple", "Scalar", `Generator`, `TensorIndex`, `Device`, `Placement`, `Sbp`, `SbpList`, "Int", "Int32", "Int64", "Float", "Double", "String", "Bool",
   "ScalarList", "IntList", "Int32List", "Int64List", "FloatList", "DoubleList", "StringList",
   "BoolList", "DataType", "Shape"
   ```
@@ -131,6 +131,7 @@ signature在书写时也有几点注意事项：
   ```python
   y = F.add_scalar(x)  # alpha is 1 by default
   y = F.add_scalar(x, alpha=1)
+  y = F.add_scalar(x=x, alpha=1)
   ```
 
 同时目前也支持多个signatures（支持函数重载）的情况，比如
