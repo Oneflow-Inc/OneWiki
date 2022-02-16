@@ -29,6 +29,7 @@ jobs:
         with:
            key: ${{ secrets.SSH_PRIVATE_KEY }}
            name: id_rsa # optional
+           known_hosts: unnecessary
       - run: |
           git remote add oneflow git@github.com:Oneflow-Inc/oneflow.wiki.git
           git config --global user.email "ci-bot@oneflow.org"
