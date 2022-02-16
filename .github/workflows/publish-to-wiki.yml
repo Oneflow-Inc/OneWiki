@@ -26,5 +26,5 @@ jobs:
         run: |
           git config --global user.email "ci-bot@oneflow.org"
           git config --global user.name "oneflow-ci-bot"
-          git remote add oneflow git@github.com:Oneflow-Inc/oneflow.wiki.git
+          git remote add oneflow https://github.com/Oneflow-Inc/oneflow.wiki.git
           git push oneflow master
