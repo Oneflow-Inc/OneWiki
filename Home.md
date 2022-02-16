@@ -5,9 +5,9 @@ Welcome to the OneFlow wiki!
 
 
 
-## May 2021
+## May 2022
 
-version:   OneFlow v0.4.0
+version:   OneFlow v0.6.0
 
 
 
